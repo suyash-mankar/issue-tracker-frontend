@@ -17,7 +17,7 @@ function ProjectDetails() {
   useEffect(() => {
     // Make an API call to get the project details from  database
     const getProject = async () => {
-      const response = await fetch(`/project/details/${id}`);
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/project/details/${id}`);
       if (response.status === 200) {
         const data = await response.json();
         // set the project data in project state

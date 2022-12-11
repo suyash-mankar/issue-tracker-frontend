@@ -28,7 +28,9 @@ function CreateIssue() {
   useEffect(() => {
     // Make an API call to get the project details from  database
     const getProject = async () => {
-      const response = await fetch(`/project/details/${id}`);
+      const response = await fetch(
+        `${process.env.REACT_APP_BASE_URL}/project/details/${id}`
+      );
       if (response.status === 200) {
         const data = await response.json();
         setProject(data);
@@ -50,7 +52,7 @@ function CreateIssue() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Make an API call to create issue in database
-    const res = await fetch("/issue/create", {
+    const res = await fetch(`${process.env.REACT_APP_BASE_URL}/issue/create`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

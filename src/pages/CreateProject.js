@@ -18,7 +18,7 @@ function CreateProject() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Make an API call to create project in database
-    const res = await fetch("/project/create", {
+    const res = await fetch(`${process.env.REACT_APP_BASE_URL}/project/create`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

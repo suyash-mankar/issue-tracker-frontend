@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     // Fetch the projects data from database
     const getProjects = async () => {
-      const response = await fetch("/home");
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/home`);
       if (response.status === 200) {
         const data = await response.json();
         // Set projects state
