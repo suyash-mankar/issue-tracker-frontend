@@ -7,10 +7,10 @@ function App() {
     <Router>
       <NavbarComp />
       <Routes>
-        <Route path="/" element={<Home />} />} />
-        <Route path="/project/create" element={<CreateProject />} />} />
-        <Route path="/project/details/:id" element={<ProjectDetails />} />} />
-        <Route path="/issue/create/:id" element={<CreateIssue />} />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/project/create" element={<CreateProject />} />
+        <Route path="/project/details/:id" element={<ProjectDetails />} />
+        <Route path="/issue/create/:id" element={<CreateIssue />} />
       </Routes>
     </Router>
   );
